@@ -1,0 +1,16 @@
+<!-- templates/post_detail.html -->
+{% extends '_base.html' %} {% block content %}
+<div class="post-entry">
+  <h1>Department Info</h1>
+  <h2>{{ department.departmentName }}</h2>
+  <p>{{ department.company }}</p>
+
+  <ul>
+    {% for employee in department.employees.all %}
+    <div class="post-entry">
+      <h2><a href="">{{ employee }}</a></h2>
+    </div>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}_

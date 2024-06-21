@@ -1,3 +1,4 @@
+{% extends '_base.html' %}
 <!-- templates/home.html -->
 {% comment %} List different companies and provide ability to select company
 Clicking on a company will lead to page showing departments for that company.
@@ -11,8 +12,15 @@ Under new company, provide support for bulk upload.
 Under new department, provide support for bulk upload.
 Under new employee, provide support for bulk upload.
  {% endcomment %}
-{% extends '_base.html' %}
+
 {% block title %}Home{% endblock title %}
 {% block content %}
-<h1>Homepage</h1>
+<h1>TALENT VERIFY</h1>
+
+{% for company in object_list %}
+<div class="post-entry">
+<h2><a href="{% url 'company_detail' company.pk %}">{{ company.name }}</a></h2>
+</div>
+{% endfor %}
+
 {% endblock content %}

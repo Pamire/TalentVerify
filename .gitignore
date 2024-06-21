@@ -1,1 +1,5 @@
 __pycache__/
+pages/migrations/0001_initial.py
+pages/migrations/0002_alter_employee_dateleft_alter_employee_duties.py
+pages/migrations/0003_alter_company_contactpersonemail_and_more.py
+pages/migrations/0004_alter_department_company.py

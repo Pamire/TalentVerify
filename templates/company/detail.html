@@ -1,0 +1,18 @@
+<!-- templates/post_detail.html -->
+{% extends '_base.html' %}
+{% block content %}
+<div class="post-entry">
+<h2>{{ company.name }}</h2>
+<p>{{ company.registrationNumber }}</p>
+<p>{{ company.address }}</p>
+
+<ul>
+    {% for department in company.departments.all %}
+    <div class="post-entry">
+    <h2><a href="{% url 'department_detail' department.pk %}">{{ department.departmentName }}</a></h2>
+    </div>
+    {% endfor %}
+</ul> 
+
+</div>
+{% endblock content %}_
